@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Store</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
+        <script src="https://www.paypal.com/sdk/js?client-id=AcNaVw7_locOQugSO7NoDcmn2gseK3aU9eWzsNSeiJh3x6y8tpV9IVds7MOYUBcfM_XjVYAjD6T-XhKj"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://kit.fontawesome.com/8281b70098.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <div class="wrapper">
+                <div class="logo">
+                    <a href="index.html"
+                        ><img src="images/logo.png" alt="Elevate Fitness"
+                    /></a>
+                </div>
+                <div class="navbar">
+                    <div class="close-nav"><button>×</button></div>
+                    <nav>
+                        <ul>
+                            <li><a href="workouts.html">WORKOUTS</a></li>
+                            <li><a href="exercises.html">EXERCISES</a></li>
+                            <li><a href="recipes.html">RECIPES</a></li>
+                            <li><a href="store.html">STORE</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="menu-bar">
+                    <button><i></i></button>
+                </div>
+            </div>
+        </header>
+        <main>
+            <h1 class="mb60">
+                Store
+            </h1>
+            <div class="store-container">
+                <div class="products-container">
+                    <h2>Products</h2>
+                    <div class="products-grid">
+                        <div class="product">
+                            <img src="images/store1.jpg" alt="Nutrex Creatine Drive" class="product-img">
+                            <h3 class="product-name">Nutrex Creatine Drive</h3>
+                            <p class="product-price">25.00</p> 
+                            <button data-action="add-to-cart">Add to cart</button>
+                        </div>
+                        <div class="product">
+                            <img src="images/store2.jpg" alt="MuscleTech Nitro-Tech" class="product-img">
+                            <h3 class="product-name">MuscleTech Nitro-Tech</h3>
+                            <p class="product-price">27.00</p> 
+                            <button data-action="add-to-cart">Add to cart</button>
+                        </div>
+                        <div class="product">
+                            <img src="images/store3.jpg" alt="MuscleTech Platinum 100% Creatine" class="product-img">
+                            <h3 class="product-name">MuscleTech Platinum 100% Creatine</h3>
+                            <p class="product-price">24.00</p> 
+                            <button data-action="add-to-cart">Add to cart</button>
+                        </div>
+                        <div class="product">
+                            <img src="images/store4.jpg" alt="MuscleTech Nitro-Tech 100% Whey Gold" class="product-img">
+                            <h3 class="product-name">MuscleTech Nitro-Tech 100% Whey Gold</h3>
+                            <p class="product-price">31.00</p> 
+                            <button data-action="add-to-cart">Add to cart</button>
+                        </div>
+                        <div class="product">
+                            <img src="images/store5.jpg" alt="NOW Foods Melatonin" class="product-img">
+                            <h3 class="product-name">NOW Foods Melatonin</h3>
+                            <p class="product-price">3.00</p> 
+                            <button data-action="add-to-cart">Add to cart</button>
+                        </div>
+                        <div class="product">
+                            <img src="images/store6.jpg" alt="Dymatize ISO100" class="product-img">
+                            <h3 class="product-name">Dymatize ISO100</h3>
+                            <p class="product-price">34.00</p> 
+                            <button data-action="add-to-cart">Add to cart</button>
+                        </div>
+                        <div class="product">
+                            <img src="images/store7.jpg" alt="SnackTime Breakfast Oats" class="product-img">
+                            <h3 class="product-name">SnackTime Breakfast Oats</h3>
+                            <p class="product-price">12.00</p> 
+                            <button data-action="add-to-cart">Add to cart</button>
+                        </div>
+                        <div class="product">
+                            <img src="images/store8.jpg" alt="Rule 1 R1 Whey Blend" class="product-img">
+                            <h3 class="product-name">Rule 1 R1 Whey Blend</h3>
+                            <p class="product-price">15.00</p> 
+                            <button data-action="add-to-cart">Add to cart</button>
+                        </div>
+                        <div class="product">
+                            <img src="images/store9.jpg" alt="AllMax Nutrition Caffeine" class="product-img">
+                            <h3 class="product-name">AllMax Nutrition Caffeine</h3>
+                            <p class="product-price">8.00</p> 
+                            <button data-action="add-to-cart">Add to cart</button>
+                        </div>
+                        <div class="product">
+                            <img src="images/store10.jpg" alt="BPI Sports ISO HD" class="product-img">
+                            <h3 class="product-name">BPI Sports ISO HD</h3>
+                            <p class="product-price">19.00</p> 
+                            <button data-action="add-to-cart">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-container">
+                    <h2>Cart</h2>
+                    <div class="cart">
+                        <!-- <div class="cart-item">
+                            <img src="images/store1.jpg" alt="">
+                            <p>Product</p>
+                            <p>24.95€</p>
+                            <div class="cart-buttons">
+                                <button>-</button>
+                                <p>1</p>
+                                <button>+</button>
+                                <button class="deleteBtn">X</button>
+                            </div>
+                        </div>
+                        <div class="cart-item">
+                            <img src="images/store1.jpg" alt="">
+                            <p>Product</p>
+                            <p>24.95€</p>
+                            <div class="cart-buttons">
+                                <button>-</button>
+                                <p>1</p>
+                                <button>+</button>
+                                <button class="deleteBtn">X</button>
+                            </div>
+                        </div> -->
+                    </div>
+                    <!-- <div class="cart-checkout">
+                        <button>Clear Cart</button>
+                        <button>Checkout</button>
+                    </div> -->
+                    <div id="paypal" class="display-toggle"></div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>Copyright © 2023 Elevate Fitness. All rights reserved</p>
+            <div class="socials">
+                <a href="https://www.twitter.com"
+                    ><i class="fa fa-twitter"></i
+                ></a>
+                <a href="https://www.instagram.com"
+                    ><i id="social-ig" class="fa fa-instagram"></i
+                ></a>
+            </div>
+        </footer>
+        <script src="js/store.js"></script>
+    </body>
+</html>
