@@ -7,7 +7,10 @@ let groupName = pageUrl.href.split("?").pop().replace("%20", " ");
 console.log(groupName);
 let exercisesList;
 let title = document.getElementById("ex-title");
-let exerciseGrid = document.getElementById("ex-grid");
+let exerciseGrid = document.getElementById("ex-grid")
+let loadMoreButton = document.getElementById("load-more-button");
+const INITIAL_ITEMS = 16;
+const LOAD_ITEMS = 8;
 
 title.innerHTML = groupName;
 fetch(`https://exercisedb.p.rapidapi.com/exercises/target/${groupName}`, {
@@ -19,12 +22,15 @@ fetch(`https://exercisedb.p.rapidapi.com/exercises/target/${groupName}`, {
 })
     .then((response) =>
         response.json().then((data) => {
-            exercisesList = data.slice(0, 16);
+            exercisesList = data;
             console.log(exercisesList);
             console.log(data);
 
-            for (let i = 0; i < exercisesList.length; i++) {
+            for (let i = 0; i < INITIAL_ITEMS; i++) {
                 addExerciseTile(exercisesList[i]);
+            }
+            if (exercisesList.length > 16) {
+                loadMoreButton.style.visibility = "visible";
             }
         })
     )
@@ -47,6 +53,19 @@ function addExerciseTile(data) {
     exerciseGrid.appendChild(exerciseTile);
     console.log(exerciseName);
 
+}
+
+//Funció que controla el funcionament del botó de Load More. Mostra 8 exercicis més al clicar el botó.
+function loadData() {
+    let currentDisplayedItems = document.querySelectorAll("h3").length;
+    console.log(currentDisplayedItems);
+    let counter = 16;
+    for (let i = currentDisplayedItems; i < exercisesList.length; i++) {
+        if (counter >= currentDisplayedItems && counter < LOAD_ITEMS + currentDisplayedItems) {
+            addExerciseTile(exercisesList[i]);
+        }
+        counter++;
+    }
 }
 
 /*
